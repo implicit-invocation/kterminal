@@ -13,13 +13,10 @@ buildscript {
 
 apply plugin: 'kotlin'
 
-kotlinOptions {
-  freeCompilerArgs = ['-parameters']
-}
-
-
 sourceCompatibility = 1.6
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+compileJava.options.compilerArgs.add '-parameters'
 
 sourceSets {
   main.kotlin.srcDirs += 'src'
