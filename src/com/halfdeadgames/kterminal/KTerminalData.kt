@@ -2,6 +2,7 @@ package com.halfdeadgames.kterminal
 
 import com.badlogic.gdx.graphics.Color
 
+
 class KTerminalData(width: Int,
                     height: Int,
                     var defaultForeground: Color = Color.WHITE.cpy(),
