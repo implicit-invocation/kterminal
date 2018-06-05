@@ -13,7 +13,11 @@ buildscript {
 
 apply plugin: 'kotlin'
 
-compileJava.options.compilerArgs.add '-parameters'
+tasks.withType<JavaCompile> {
+  val compilerArgs = options.compilerArgs
+  compilerArgs.add("-Xdoclint:all,-missing")
+  compilerArgs.add("-Xlint:all")
+}
 
 sourceCompatibility = 1.6
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
