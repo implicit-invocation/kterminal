@@ -13,6 +13,8 @@ buildscript {
 
 apply plugin: 'kotlin'
 
+compileJava.options.compilerArgs.add '-parameters'
+
 sourceCompatibility = 1.6
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 
